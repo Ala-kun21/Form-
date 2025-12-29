@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تسجيل الطلاب الجامعيين</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+<h2>تسجيل الطلاب الجامعيين</h2>
+
+<form id="studentForm">
+
+  <input type="text" id="firstName" placeholder="First Name" required>
+  <input type="text" id="lastName" placeholder="Last Name" required>
+  <input type="email" id="email" placeholder="Email" required>
+
+  <div class="phone-group">
+    <select id="countryCode" required>
+      <option value="">اختر مفتاح الدولة</option>
+      <option value="+1">USA (+1)</option>
+      <option value="+44">UK (+44)</option>
+      <option value="+91">India (+91)</option>
+      <option value="+81">Japan (+81)</option>
+      <option value="+49">Germany (+49)</option>
+      <option value="+33">France (+33)</option>
+      <option value="+39">Italy (+39)</option>
+      <option value="+55">Brazil (+55)</option>
+      <option value="+61">Australia (+61)</option>
+      <option value="+7">Russia (+7)</option>
+      <option value="+20">Egypt (+20)</option>
+      <option value="+249">Sudan (+249)</option>
+      <option value="+966">Saudi Arabia (+966)</option>
+      <option value="+974">Qatar (+974)</option>
+    </select>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+  </div>
+
+  <input type="text" id="city" placeholder="City" required>
+  <input type="text" id="country" placeholder="Country" required>
+  <input type="text" id="major" placeholder="تخصصك في الجامعة" required>
+
+  <!-- تعديل حقل تاريخ الميلاد مع تسمية واضحة -->
+  <label for="dob" style="display:block; margin-top:10px;">تاريخ ميلادك:</label>
+  <input type="date" id="dob" required>
+
+  <input type="text" id="hobbies" placeholder="هواياتك" required>
+
+  <select id="gender" required>
+    <option value="">Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <button type="submit">إرسال</button>
+</form>
+
+<p id="msg"></p>
+
+<script src="script.js"></script>
+</body>
+</html>
